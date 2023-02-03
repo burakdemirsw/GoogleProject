@@ -7,7 +7,8 @@
         <nav class="nav nav-masthead justify-content-center">
           <a class="nav-link active" href="#">Home</a>
           <a class="nav-link" href="#">Features</a>
-          <a class="nav-link" routerLink="/login">Login</a>
+          <a class="nav-link" routerLink="/login">LogIn</a>
+          <a class="nav-link" (click)="logOut()">Logout</a>
         </nav>
       </div>
     </header>
@@ -16,7 +17,7 @@
       <h1 class="cover-heading">Google Project HomePage</h1>
       <p class="lead">Cover is a one-page template for building simple and beautiful home pages. Download, edit the text, and add your own fullscreen background photo to make it your own.</p>
       <p class="lead">
-        <a href="#" class="btn btn-lg btn-secondary">Join Us!</a>
+        <a href="#" class="btn btn-lg btn-secondary" (click)="showToaster()">Join Us!</a>
       </p>
     </main>
 
