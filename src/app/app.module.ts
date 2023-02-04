@@ -7,6 +7,9 @@ import { AppComponent } from './app.component';
 import { HomeComponent } from './home/home.component';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MdbCheckboxModule } from 'mdb-angular-ui-kit/checkbox';
+import { LoginComponent } from './login/login.component';
+
+
 
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
@@ -24,7 +27,8 @@ import { DoctorsComponent } from './doctors/doctors.component';
     AboutUsComponent,
     ContactUsComponent,
     DepartmentsComponent,
-    DoctorsComponent
+    LoginComponent,
+    DoctorsComponent,
   ],
   imports: [
     BrowserModule,
@@ -33,10 +37,9 @@ import { DoctorsComponent } from './doctors/doctors.component';
     ReactiveFormsModule,
     ToastrModule.forRoot(),
     BrowserAnimationsModule,
-    MdbCheckboxModule
-
+    MdbCheckboxModule,
   ],
   providers: [],
-  bootstrap: [AppComponent]
+  bootstrap: [AppComponent],
 })
-export class AppModule { }
+export class AppModule {}
