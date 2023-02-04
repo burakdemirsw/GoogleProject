@@ -11,13 +11,9 @@ import { SecurityGuard } from './login/security.guard';
 const routes: Routes = [
   {path:'', component:HomeComponent },
   {path:'home', component:HomeComponent , canActivate:[SecurityGuard]},
-  {path:'contact-us', component:ContactUsComponent,canActivate:[SecurityGuard] },
+  {path:'contact-us', component:ContactUsComponent, canActivate:[SecurityGuard] },
   {path:'login', component:LoginComponent },
-
-
   {path:'about-us', component:AboutUsComponent }
-
-
 ];
 
 @NgModule({

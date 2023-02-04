@@ -93,7 +93,7 @@ a:focus {
 /*header section*/
 .header-main {
   background-color: #178066;  
-  position: fixed; 
+  position: sticky; 
   top: 0; 
   left: 0; 
   right: 0; 
