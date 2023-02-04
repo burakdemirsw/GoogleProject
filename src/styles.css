@@ -91,6 +91,14 @@ a:focus {
 }
 
 /*header section*/
+.header-main {
+  background-color: #178066;  
+  position: fixed; 
+  top: 0; 
+  left: 0; 
+  right: 0; 
+  z-index: 999;
+}
 .hero_area {
   position: relative;
   min-height: 100vh;
