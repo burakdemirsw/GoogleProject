@@ -40,8 +40,10 @@ export class LoginComponent implements OnInit {
     if(user!=undefined){
       if(loginRequestForm.valid && this.users.find(t=>t.email == form.email && t.password == form.password)){
         localStorage.setItem("accessToken",UserInfo.token);
-        location.href="http://localhost:4200/"
         this.toasterService.showSuccess()
+        setTimeout(() => {
+          location.href="http://localhost:4200/"
+        }, 700);
       }
       else{
         this.toasterService.showError()
