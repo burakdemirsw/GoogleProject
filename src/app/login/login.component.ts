@@ -46,7 +46,7 @@ export class LoginComponent implements OnInit {
         }, 500);
       }
       else{
-        this.toasterService.showError()
+        this.toasterService.showError("Invalid Email/Password")
 
       }
       console.log(loginRequestForm.value);

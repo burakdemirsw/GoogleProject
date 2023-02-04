@@ -5,15 +5,15 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 import { HomeComponent } from './home/home.component';
 import { LoginComponent } from './login/login.component';
 import { LoginGuard } from './login/login.guard';
-import { SecurityGuard } from './login/security.guard';
 
 
 const routes: Routes = [
   {path:'', component:HomeComponent },
-  {path:'home', component:HomeComponent , canActivate:[SecurityGuard]},
-  {path:'contact-us', component:ContactUsComponent, canActivate:[SecurityGuard] },
+  {path:'home', component:HomeComponent , canActivate:[LoginGuard]},
+  {path:'contact-us', component:ContactUsComponent,canActivate:[LoginGuard] },
   {path:'login', component:LoginComponent },
   {path:'about-us', component:AboutUsComponent }
+
 ];
 
 @NgModule({

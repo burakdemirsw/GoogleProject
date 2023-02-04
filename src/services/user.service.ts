@@ -1,11 +1,12 @@
 import { Injectable } from '@angular/core';
+import { ToasterService } from './toaster.service';
 
 @Injectable({
   providedIn: 'root'
 })
 export class UserService {
 
-  constructor() { }
+  constructor(private toastrService:ToasterService) { }
 
   getAccessToken():boolean | string{
     let token =localStorage.getItem("accessToken");
@@ -19,7 +20,10 @@ export class UserService {
   logOut(){
     if(localStorage.getItem("accessToken")){
       localStorage.removeItem("accessToken");
-      location.reload()
+      this.toastrService.showError("Logged-Out!")
+      setTimeout(() => {
+        location.reload()
+      }, 500);
 
     }
   }

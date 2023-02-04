@@ -12,7 +12,7 @@ export class ToasterService {
     this.toastr.success('Hello world!', 'Toastr fun!');
   }
 
-  showError() {
-    this.toastr.error('Error!', 'System Error!');
+  showError(errorMessage:string) {
+    this.toastr.error('Error!', errorMessage);
   }
 }
