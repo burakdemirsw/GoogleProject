@@ -9,15 +9,13 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { MdbCheckboxModule } from 'mdb-angular-ui-kit/checkbox';
 import { LoginComponent } from './login/login.component';
 
-
-
 import { HeaderComponent } from './header/header.component';
 import { FooterComponent } from './footer/footer.component';
 import { AboutUsComponent } from './about-us/about-us.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { DepartmentsComponent } from './departments/departments.component';
 import { DoctorsComponent } from './doctors/doctors.component';
-import { DoctorPanelComponent } from './doctor-panel/doctor-panel.component';
+import { MeetingsComponent } from './meetings/meetings.component';
 
 @NgModule({
   declarations: [
@@ -30,7 +28,7 @@ import { DoctorPanelComponent } from './doctor-panel/doctor-panel.component';
     DepartmentsComponent,
     LoginComponent,
     DoctorsComponent,
-    DoctorPanelComponent,
+    MeetingsComponent
   ],
   imports: [
     BrowserModule,
