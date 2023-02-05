@@ -1,8 +1,12 @@
 <h1>{{ isSignedIn ? "Signed in!" : "Signed out :(" }}</h1>
 
 
-<full-calendar [options]="calendarOptions"  [events]="eventsPromise | async" style="max-width: 90%; margin-left: 5%;" *ngIf="isSignedIn"></full-calendar>
-
+<full-calendar
+  [options]="calendarOptions"
+  [events]="eventsPromise | async"
+  style="max-width: 90%; margin-left: 5%;" 
+  *ngIf="isSignedIn"
+></full-calendar>
 
 <button *ngIf="isSignedIn" (click)="handleSignoutClick()">Sign Out</button>
 <button *ngIf="!isSignedIn" (click)="handleAuthClick()">Sign In</button>
