@@ -12,16 +12,14 @@ export class HeaderComponent implements OnInit{
 
   }
   ngOnInit(): void {
-    this.loggedIn()
+    this.loginStatus()
   }
 
   logOut(){
     this.userService.logOut()
   }
-  loggedIn(){
-    debugger
+  loginStatus(){
     this.isLoggedIn = localStorage.getItem("accessToken")?true:false;
-    console.log(this.isLoggedIn)
   }
 
 }
