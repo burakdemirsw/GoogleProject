@@ -35,7 +35,16 @@ z-index: 999;" >
               <a class="nav-link" routerLink="contact-us" >Contact Us</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" *ngIf="currentUserRole">Profile</a>
+              <div class="dropdown">
+                <a class="nav-link dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
+                  Profile
+                </a>
+                <div class="dropdown-menu" aria-labelledby="dropdownMenuButton">
+                  <a class="dropdown-item" routerLink="doctor-panel">Account</a>
+                  <a class="dropdown-item" routerLink="doctor-panel">Meetings </a>
+                  <a class="dropdown-item" routerLink="doctor-panel">History</a>
+                </div>
+              </div>
             </li>
             <li class="nav-item">
               <a class="nav-link" routerLink="contact-us" *ngIf="isLoggedIn===false">Log-In</a>
