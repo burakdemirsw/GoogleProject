@@ -79,9 +79,7 @@ export class MeetingsComponent implements OnInit {
       .then((response) => {
         this.zone.run(() => {
           if (response.result.items) {
-
             const events = response.result.items;
-            appendPre('Upcoming events:');
 
             if (events.length > 0) {
               let events_list = "";
