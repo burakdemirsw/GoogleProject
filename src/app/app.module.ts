@@ -17,6 +17,7 @@ import { AboutUsComponent } from './about-us/about-us.component';
 import { ContactUsComponent } from './contact-us/contact-us.component';
 import { DepartmentsComponent } from './departments/departments.component';
 import { DoctorsComponent } from './doctors/doctors.component';
+import { DoctorPanelComponent } from './doctor-panel/doctor-panel.component';
 
 @NgModule({
   declarations: [
@@ -29,6 +30,7 @@ import { DoctorsComponent } from './doctors/doctors.component';
     DepartmentsComponent,
     LoginComponent,
     DoctorsComponent,
+    DoctorPanelComponent,
   ],
   imports: [
     BrowserModule,

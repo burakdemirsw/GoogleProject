@@ -35,10 +35,10 @@ z-index: 999;" >
               <a class="nav-link" routerLink="contact-us" >Contact Us</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" routerLink="contact-us" >Log-In</a>
+              <a class="nav-link" routerLink="contact-us" *ngIf="isLoggedIn===false">Log-In</a>
             </li>
             <li class="nav-item">
-              <a class="nav-link" routerLink="contact-us" (click)="logOut()" >Log-Out</a>
+              <a class="nav-link" routerLink="contact-us" (click)="logOut()"  *ngIf="isLoggedIn==true" >Log-Out</a>
             </li>
             <form class="form-inline">
               <button class="btn  my-2 my-sm-0 nav_search-btn" type="submit">
