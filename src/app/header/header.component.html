@@ -35,6 +35,9 @@ z-index: 999;" >
               <a class="nav-link" routerLink="contact-us" >Contact Us</a>
             </li>
             <li class="nav-item">
+              <a class="nav-link" *ngIf="currentUserRole">Profile</a>
+            </li>
+            <li class="nav-item">
               <a class="nav-link" routerLink="contact-us" *ngIf="isLoggedIn===false">Log-In</a>
             </li>
             <li class="nav-item">

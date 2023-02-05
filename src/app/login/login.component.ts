@@ -5,7 +5,7 @@ import {
   FormControl,
   Validators,
 } from '@angular/forms';
-import { ToasterService } from 'src/services/toaster.service';
+import { ToasterService } from 'src/app/services/toaster.service';
 import { UserInfo } from '../models/enums/userInfo';
 import { User } from '../models/user';
 @Component({
@@ -15,10 +15,13 @@ import { User } from '../models/user';
 })
 export class LoginComponent implements OnInit {
   userRequestForm!: FormGroup;
+
   users : Array<User> = [
-    {id:1,email:"burak",password: "1234"},
-    {id:2,email:"abbas",password: "123"},
-    {id:3,email:"ecmel",password: "123"},
+    {id:1,email:"burak",password: "1234" ,role:'patient'},
+    {id:2,email:"abbas",password: "123",role:'patient'},
+    {id:3,email:"ecmel",password: "123",role:'patient'},
+    {id:4,email:"doctor",password: "123",role:'doctor'},
+
   ]
   constructor(private formBuilder: FormBuilder,private toasterService:ToasterService) {}
 
@@ -36,7 +39,9 @@ export class LoginComponent implements OnInit {
 
     let form  = Object.assign({},loginRequestForm.value)
     let user = this.users.find(t=>t.email == form.email)
-
+      if(user?.role=='doctor'){
+        localStorage.setItem("doctor",'true')
+      }
     if(user!=undefined){
       if(loginRequestForm.valid && this.users.find(t=>t.email == form.email && t.password == form.password)){
         localStorage.setItem("accessToken",UserInfo.token);
@@ -55,3 +60,4 @@ export class LoginComponent implements OnInit {
     }
 
 }
+

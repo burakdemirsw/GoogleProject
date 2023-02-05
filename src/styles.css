@@ -1,5 +1,7 @@
 @import 'ngx-toastr/toastr';
 @import "~bootstrap/dist/css/bootstrap.min.css";
+@import "../node_modules/bootstrap-icons/font/bootstrap-icons.css";
+
 @import url("https://fonts.googleapis.com/css2?family=Nunito:wght@400;600;700&display=swap");
 body {
   font-family: 'Nunito', sans-serif;
@@ -92,11 +94,11 @@ a:focus {
 
 /*header section*/
 .header-main {
-  background-color: #178066;  
-  position: sticky; 
-  top: 0; 
-  left: 0; 
-  right: 0; 
+  background-color: #178066;
+  position: sticky;
+  top: 0;
+  left: 0;
+  right: 0;
   z-index: 999;
 }
 .hero_area {
