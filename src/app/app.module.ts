@@ -16,6 +16,8 @@ import { ContactUsComponent } from './contact-us/contact-us.component';
 import { DepartmentsComponent } from './departments/departments.component';
 import { DoctorsComponent } from './doctors/doctors.component';
 import { MeetingsComponent } from './meetings/meetings.component';
+import { FullCalendarModule } from '@fullcalendar/angular';
+
 
 @NgModule({
   declarations: [
@@ -28,7 +30,7 @@ import { MeetingsComponent } from './meetings/meetings.component';
     DepartmentsComponent,
     LoginComponent,
     DoctorsComponent,
-    MeetingsComponent
+    MeetingsComponent,
   ],
   imports: [
     BrowserModule,
@@ -38,6 +40,7 @@ import { MeetingsComponent } from './meetings/meetings.component';
     ToastrModule.forRoot(),
     BrowserAnimationsModule,
     MdbCheckboxModule,
+    FullCalendarModule
   ],
   providers: [],
   bootstrap: [AppComponent],
