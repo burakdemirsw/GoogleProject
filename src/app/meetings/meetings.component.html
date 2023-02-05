@@ -3,9 +3,7 @@
 
 <full-calendar
   [options]="calendarOptions"
-  [events]="eventsPromise | async"
-  style="max-width: 90%; margin-left: 5%;" 
-  *ngIf="isSignedIn"
+  style="max-width: 90%; margin-left: 5%;"
 ></full-calendar>
 
 <button *ngIf="isSignedIn" (click)="handleSignoutClick()">Sign Out</button>

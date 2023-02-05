@@ -1,6 +1,6 @@
 import { Component, NgZone, OnInit } from '@angular/core';
 import { gapi } from "gapi-script";
-import { CalendarOptions, EventsInput } from '@fullcalendar/core';
+import { CalendarOptions } from '@fullcalendar/core'; // useful for typechecking
 import dayGridPlugin from '@fullcalendar/daygrid';
 
 @Component({
@@ -12,9 +12,13 @@ import dayGridPlugin from '@fullcalendar/daygrid';
 export class MeetingsComponent implements OnInit {
   calendarOptions: CalendarOptions = {
     initialView: 'dayGridMonth',
+    plugins: [dayGridPlugin],
+    events: [ 
+      { title: 'event 1', date: '2023-02-05' },
+      { title: 'event 2', date: '2023-02-04' },
+    ],
+    
   };
-  eventsPromise: Promise<EventsInput>;
-
 
   isSignedIn:boolean = false;
   pre = '';
