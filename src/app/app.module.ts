@@ -18,6 +18,7 @@ import { DoctorsComponent } from './doctors/doctors.component';
 import { MeetingsComponent } from './meetings/meetings.component';
 import { FullCalendarModule } from '@fullcalendar/angular';
 import { AdminComponent } from './admin/admin.component';
+import { HttpClientModule } from '@angular/common/http';
 
 
 @NgModule({
@@ -42,7 +43,8 @@ import { AdminComponent } from './admin/admin.component';
     ToastrModule.forRoot(),
     BrowserAnimationsModule,
     MdbCheckboxModule,
-    FullCalendarModule
+    FullCalendarModule,
+    HttpClientModule
   ],
   providers: [],
   bootstrap: [AppComponent],
