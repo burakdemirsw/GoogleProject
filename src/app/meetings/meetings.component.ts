@@ -10,6 +10,7 @@ import dayGridPlugin from '@fullcalendar/daygrid';
 })
 
 export class MeetingsComponent implements OnInit {
+  
   calendarOptions: CalendarOptions = {
     initialView: 'dayGridMonth',
     plugins: [dayGridPlugin],
@@ -91,9 +92,11 @@ export class MeetingsComponent implements OnInit {
                   }
                   
                   events_list += "{ title: '"+event.summary+"', date: '"+when?.slice(0, 10)+"' },";
+                  
                 }
               }
               appendPre(events_list);
+              
             } else {
               appendPre('No upcoming events found.');
             }

@@ -17,6 +17,7 @@ import { DepartmentsComponent } from './departments/departments.component';
 import { DoctorsComponent } from './doctors/doctors.component';
 import { MeetingsComponent } from './meetings/meetings.component';
 import { FullCalendarModule } from '@fullcalendar/angular';
+import { AdminComponent } from './admin/admin.component';
 
 
 @NgModule({
@@ -31,6 +32,7 @@ import { FullCalendarModule } from '@fullcalendar/angular';
     LoginComponent,
     DoctorsComponent,
     MeetingsComponent,
+    AdminComponent,
   ],
   imports: [
     BrowserModule,
